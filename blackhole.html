@@ -62,9 +62,19 @@
 
   </div>
   </div>
+       <div id="about">
+
+      <hgroup>
+        <h2><a href="#blackhole" onclick="showblack()">blackhole</a> <span id="forblack">></span> </h2>
+        <h2><a href="#whitehole" onclick="showwhite()">whitehole</a> <span id="forwhite">></span></h2>
+       
+      </hgroup>
+
+    </div>
+
   <!--part1-->
-  <div id="second">
-  
+  <div id="blackhole">
+  <div class="defff">
   <div class="deff">
   <h1 >
   <span>b</span>
@@ -77,6 +87,7 @@
   <span>l</span>
   <span>e </span>
   </h1>
+  </div>
   <div class="picture1">
    <img src="../images2/black4.jpg" alt="Not found" >
    <h1>Did you know?</h1>
@@ -130,14 +141,13 @@ Because  no  light  can  get  out,  people  can't  see black holes.They are </br
   hole as they orbit the sun now. The sun will never turn into a black hole. The sun</br>
   is not a big enough star to make a black hole.</br></dd>
   </div>
- </div>
- <!--part2-->
+ 
  <div class="services" >
  <h1><span>T</span>op <span>5</span> <span>O</span>f <span>T</span>he <span>C</span>losest <span>B</span>lack <span>H</span>oles <span>T</span>o <span>E</span>arth</h1>
  </div>
  <div class="row">
  <div class="service-items">
- <div class="row">
+ 
  <div id="hole1" class="item">
  <div class="item-inner">
  <span></span>
@@ -267,9 +277,6 @@ They think the wobble could be caused by the black hole warping space-time.
  </div>
  </div>
  </div>
- 
- </div>
-
  </div>
  </div>
  <div class="popupbox">
@@ -286,6 +293,34 @@ They think the wobble could be caused by the black hole warping space-time.
 	   </div>
     </div>
 </div>
+</div>
+  <!--part3-->
+  <div id="whitehole">
+   <h1 data-text="whitehole">whitehole</h1>
+   <div class="whatis">
+   <dt><h2>what is white hole ?</h2></dt>
+   <dd>white hole is a hypothetical region of spacetime and singularity which cannot be entered from the outside,</br>
+   although energy-matter, light and information can escape from it. In this sense, it is the reverse of a black hole,</br>
+   which can be entered only from the outside and from which energy-matter, light and information cannot escape.</br>
+   White holes appear in the theory of eternal black holes. In addition to a black hole region in the future,</br>
+   such a solution of the Einstein field equations has a white hole region in its past.</br>
+   However, this region does not exist for black holes that have formed through gravitational collapse,</br>
+   nor are there any observed physical processes through which a white hole could be formed.</dd>
+           <video class="whitevideo" src="../images2/white1.mp4" controls poster="../images2/white3.jfif" ></video>
+
+   <dt><h2>Why white holes don't exist</h2></dt>
+   <dd>While general relativity describes white holes in theory, no one knows how one might actually form.,</br>
+   A black hole cordons off its bit of space when a star collapses into a tiny volume, but playing this,</br>
+   video backwards doesn't make physical sense. An event horizon exploding into a functional star would,</br>
+   look a bit like an egg unscrambling itself — a violation of the statistical law demanding that the,</br>
+   universe gets messier over time.,</br>
+   Even if large white holes did form, they probably wouldn't hang around too long. Any outgoing matter,</br>
+   would collide with the matter in orbit, and the system would collapse into a black hole. "A long-lived,</br>
+   white hole, I think, is very unlikely," said Hal Haggard, a theoretical physicist at Bard College in,</br>
+   New York.
+   </dd>
+	</div>
+  </div>
 <footer>
 
   <ul class="host">
@@ -315,43 +350,8 @@ They think the wobble could be caused by the black hole warping space-time.
         </li>
       </ul>
     </li>
-
-    <li class="subhost">
-      <a href="solarsystem.html#planets">
-        Planets
-      </a>
-      <ul>
-        <li>
-          <a href="solarsystem.html#title" onclick="showearth()">Earth</a>
-        </li>
-        <li>
-          <a href="solarsystem.html#title" onclick="showmercury()">Mercury</a>
-        </li>
-        <li>
-          <a href="solarsystem.html#title" onclick="showvenus()">Venus</a>
-        </li>
-        <li>
-          <a href="solarsystem.html#title" onclick="showmars()">Mars</a>
-        </li>
-        <div class="partition">
-          <li>
-            <a href="solarsystem.html#title" onclick="showjupiter()">Jupiter</a>
-          </li>
-          <li>
-            <a href="solarsystem.html#title" onclick="showsaturn()">Saturn</a>
-          </li>
-          <li>
-            <a href="solarsystem.html#title" onclick="showuranus()">Uranus</a>
-          </li>
-          <li>
-            <a href="solarsystem.html#title" onclick="showneptune()">Neptune</a>
-          </li>
-        </div>
-
-      </ul>
-    </li>
-  </ul>
-
+	</ul>
+   
   <div class="logo">
     <img src="../images/logo.png" alt="Not found">
     <h1 class="header4">Space</h1>
@@ -370,6 +370,42 @@ They think the wobble could be caused by the black hole warping space-time.
 
 </footer>
  <script src="script.js"></script>
+ <script>
+  var about = [document.getElementById('blackhole'),document.getElementById('whitehole')];
+  var icon = [document.getElementById('forblack'),document.getElementById('forwhite')];
+
+  function hideall_except(e0,e1,bool)
+  {
+    if(bool)
+    {
+      e0.style.display = "block";
+      e1.style.display = "none";
+      
+    }
+    else {
+      {
+        e0.style.display = "inline";
+        e1.style.display = "none";
+        
+      }
+    }
+
+  }
+
+
+  function showblack()
+  {
+    hideall_except(about[0],about[1],1);
+    hideall_except(icon[0],icon[1],0);
+  }
+
+  function showwhite()
+  {
+    hideall_except(about[1],about[0],1);
+    hideall_except(icon[1],icon[0],0);
+  }
+
+  </script>
   </body>
 
   

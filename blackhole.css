@@ -97,6 +97,7 @@ header span{
    overflow: hidden;
 
  }
+ /*overview*/
  #FIRST h1{
   margin : 250px auto 0px 50px;
   font-size: 110px;
@@ -166,13 +167,13 @@ header span{
 	animation-delay:2s;
 }
 
-.deff h2{
+.defff h2{
        font-size:40px;
 	   font-family: cursive;
 	   color:white;
 	    margin-left:100px;
 	  }
-.deff dd{
+.defff dd{
 	 font-size:15px;
 	 font-family: Arial;
 	color:white;
@@ -250,6 +251,7 @@ header span{
 	margin-top:0px;
 	
 }
+/*top 5 holes*/
 .services{
      background-color: #000;
      width : 100%;
@@ -265,16 +267,7 @@ header span{
 	  margin-left:100px;
 	  
 }
-.services h1:before{
-	content:'';
-	position:absolute;
-	right:110%;
-	left:110%;
-	width:120%;
-	height:100%;
-	background#000 ;
-	
-}
+
 
 .services h1 span{
 	color:#ff022c;
@@ -400,6 +393,7 @@ header span{
 		margin-top:-400px;
 		margin-right:150px;
    }
+   /*more details*/
   .readmore{
    display:none;
    
@@ -474,13 +468,97 @@ header span{
 	  outline:none;
 	  
 	  }
+	  /*white Hole*/
+	  #whitehole{
+		  background-color:white;
+		  width:99.7%
+		  
+		  }
+		  #whitehole h1{
+		  position:relative;
+		  font-size:8vw;
+		  color:white;
+		  margin-left:300px;
+		  -webkit-text-stroke:0.18vw white;
+		  text-transform:uppercase;
+		  }
+		  #whitehole h1::before{
+			  content: attr(data-text);
+			  position:absolute;
+			  top:0;
+			  left:0;
+			  width:0%;
+			  height:100%;
+			  color:black;
+			  -webkit-text-stroke:0vw #383d52;
+			  border-right:2px solid white;
+			  overflow:hidden;
+			 animation: animatee 6s linear infinite;
+			  }
+  @keyframes animatee
+	{
+		0%
+		{
+			 width:0;
+
+		}
+				10%
+		{
+			 width:0;
+
+		}
+		 70%
+		  {
+			width:100%;
+		  }
+		  90%
+		  {
+			width:100%;
+			}
+		100%
+		{
+			 width:0;
+
+		}
+				  
+	}
+	.whatis {
+		margin-left:-40px;
+	}
+	.whatis h2{
+		 font-size:40px;
+	   font-family: cursive;
+	   color:black;
+	    margin-left:100px;
+	}
+	.whatis dd{
+		 font-size:15px;
+	 font-family: Arial;
+	color:black;
+	 line-height: 25px;
+	  margin-left:150px;
+	}
+	.whitevideo{
+     margin-left:300px;
+	 background-color:grey;
+     width : 800px;
+     border: inset 5px;
+     box-shadow: 2px 2px 2px grey;
+     border-radius: 0px;
+     height:450px;
+	}
+		  
+	 
+
 footer{
   background-color: black;
   position: relative;
 }
+
 footer ul{
   list-style:none;
 }
+
 .host{
   margin-top: 0px;
   display: flex;
@@ -498,39 +576,33 @@ footer ul{
 
 footer a{
   text-decoration: none;
-  color : white;
-  transition : 0.5s;
+  color: white;
+  transition: 0.5s;
 }
+
 footer a:hover{
-  color : #eeba30;
+  color: #eeba30;
   border-bottom: solid white;
 }
+
 .subhost ul{
   padding: 0px;
   margin-top: 30px;
 }
 
-.subhost ul li{
+.subhost li{
   height: 48px;
   font-size: 18px;
-}
-
-.partition{
-  position: absolute;
-  top : 64px;
-  right : 150px;
 }
 
 .logo{
   position: absolute;
   display: flex;
   top : 200px;
-  color: white;
 }
 
 .logo img{
   height: 125px;
-  width: auto;
 }
 
 .copyright{
@@ -540,6 +612,65 @@ footer a:hover{
   font-size: 18px;
   opacity: 0.8;
 }
- 
+#about{
+  padding-top: 10px;
+  background-color: #C1C1C1;
+  height: 13vh;
+  box-shadow: -5px -5px 15px grey;
+  text-shadow:  0 0 2px black;
+}
+
+#about hgroup{
+  display: flex;
+  justify-content: center;
+}
+
+
+#about h2{
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-family: cursive;
+  font-variant: small-caps;
+  border-right: solid 1px grey;
+  padding-right: 8px;
+}
+
+#about a{
+  text-decoration: none;
+  color : black;
+}
+
+#foroverview{
+  position: absolute;
+  top:30px;
+  right: 50px;
+  transform: rotate(90deg);
+  display: inline;
+}
+
+#forplanets{
+  position: absolute;
+  top:30px;
+  right: 50px;
+  transform: rotate(90deg);
+  display: none;
+}
+
+#forcomets{
+  position: absolute;
+  top:30px;
+  right: 50px;
+  transform: rotate(90deg);
+  display: none;
+}
+
+#fordwarfplanets{
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  transform: rotate(90deg);
+  display: none;
+}
 
    
