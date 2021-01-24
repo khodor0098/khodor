@@ -1,83 +1,175 @@
+@font-face {
+  src : url(../fonts/Yeon_Sung/YeonSung-Regular.ttf);
+  font-family: YeonSung;
+}
+
+@font-face {
+  src : url(../fonts/Special_Elite/SpecialElite-Regular.ttf);
+  font-family: SpecialElite;
+}
+
+@font-face {
+  src : url(../fonts/Contrail_One/ContrailOne-Regular.ttf);
+  font-family: ContrailOne;
+}
+
+.header1{
+  font-size: 160px;
+  font-weight: 600;
+  font-family: YeonSung;
+  text-shadow: 1px 1px 3px #B9B6B6;
+  color: #eee;
+}
+
+.header2{
+  font-size: 120px;
+  font-weight: 500;
+  font-family: YeonSung;
+  text-shadow: 1px 1px 3px #B9B6B6;
+  color : #B9B6B6;
+}
+
+.header3{
+  font-size: 70px;
+  font-weight: 400;
+  font-family: YeonSung;
+  color : #163065;
+}
+
+.header4{
+  font-size: 50px;
+  font-weight: 300;
+  font-family: YeonSung;
+  color: #33518E;
+}
+
+.any-text{
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 40px;
+  font-family: SpecialElite;
+  color: #122549;
+}
+
+.define-text{
+  max-width: 500px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: cursive;
+  color: black;
+}
+
+.highlited-text{
+  font-size: 30px;
+  font-weight: 400;
+  font-family: ContrailOne;
+  text-shadow: 0 0 2px #0D4FD1;
+  color: #fff;
+}
+
+.linked-text{
+  font-size: 16px;
+  font-family: cursive;
+  text-decoration: none;
+  color: #eeba30;
+}
+
+.small-text{
+  font-size: 13px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.block{
+  display: block;
+}
+
+.inline{
+  display: inline;
+}
+
+.submit-button{
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 500;
+  color: #0F3E61;
+  background: #BCD1E1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 3px darkblue;
+}
+
+.submit-button:hover{
+  transition : 0.5s;
+  color: white;
+  background: #33518E;
+}
+
+@keyframes on-off{
+  from {
+    color : #0D4FD1;
+    text-shadow: 0 0 10px #0D4FD1;
+  }
+
+  to {
+    color : #ddd;
+    text-shadow: 0 0 10px #395DA6;
+  }
+}
+
+/* stop*/
+
 *{
   box-sizing : border-box;
 }
 
 body{
   margin : 0px;
-  background-color:#000;
 }
 
+#main{
+  background-image:  url("../images/homemain.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height : 100vh;
+}
+
+/* logo style*/
 header{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,255,0.2);
 }
-
 
 header img{
   height : 70px;
 }
 
-header h1{
-  font-size: 50px;
-  font-weight: bold;
-  font-family: cursive;
+header h4{
   margin : 6px;
   float: right;
-  color : white;
+  animation : on-off 2.5s linear 0s infinite;
 }
 
-header span{
-  color : #0901FE;
-}
-
-.linked-text{
-  font-size: 16px;
-  font-weight: 250;
-  font-family: cursive;
-  text-decoration: none;
-  color: #eeba30;
-}
 /* Nav style*/
-
 .nav-list{
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .nav-list li{
   margin-right: 30px;
   padding : 8px;
-  border-bottom : solid 2px #eeba30;
-  border-right : solid 2px #eeba30;
-  border-left : solid 2px #eeba30;
-  transition : 0.5s;
-}
-
-.join{
-  font-size: 16px;
-  font-weight: 250;
-  font-family: cursive;
-  text-decoration: none;
-  margin-right: 20px;
   border: solid 2px #eeba30;
-  border-radius: 18px;
-  padding : 8px;
-  font-size: 22px;
-  color : #aaa;
-}
-
-.join span{
-  font-size: 150%;
-  color: #eeba30;
-}
-
-.join:hover{
+  border-top: none;
+  border-radius: 5px;
   transition : 0.5s;
-  background:darkblue;
-  color : #eeba30;
-  border : solid darkblue;
 }
 
 .nav-list li:hover{
@@ -88,7 +180,703 @@ header span{
 .nav-list li:hover a{
   color : white;
 }
-#main{
+
+.nav-list li:last-child a{
+  font-size: 160%;
+  color: white;
+}
+
+.nav-list li:last-child{
+  background: #eeba30;
+  margin-left: 50px;
+  box-shadow: 1px 1px 2px white;
+  opacity: 0.9;
+}
+
+.nav-list li:last-child:hover{
+  opacity: 1;
+}
+ /* welcome*/
+
+#welcome img{
+  margin: 50px 50px 0px 0px;
+  border-radius: 20px;
+  height: 350px;
+  float: right;
+  box-shadow: 2px 2px 5px white;
+}
+
+#welcome h1{
+  margin : 100px auto 0px 50px;
+}
+
+#welcome p{
+  margin-left: 150px;
+}
+
+.between{
+  border-width: 50px;
+  margin: 0;
+}
+/* why attend*/
+
+#why-attend{
+  background: rgb(200,200,200);
+  height : 80vh;
+}
+
+#why-attend h2{
+  margin-top: 0;
+  margin-left: 50px;
+  padding: 30px;
+  color: #222;
+}
+
+#why-attend p{
+  font-size: 30px;
+  margin-left: 400px;
+}
+ /* questions */
+
+#questions{
+  height: 120vh;
+  background: url("../images/questions.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#questions h2{
+  margin-top: 0px;
+  text-align: center;
+}
+
+.fill-form{
+  float: right;
+  margin-right: 130px;
+  padding-bottom: 20px;
+  transform: translateY(-20px);
+  background-color: rgba(200,200,200,0.6);
+  padding : 5px 30px 15px 50px;
+}
+
+.subform{
+  margin-bottom: 32px;
+}
+
+.input-area{
+  display: block;
+  font-family: Arial;
+  font-size: 110%;
+  margin-top: 4px;
+  width: 300px;
+  height: 30px;
+  background: rgba(200,200,200,0);
+  border: none;
+  outline: none;
+  border-bottom:solid 2px #111;
+  resize: none;
+}
+
+.collect{
+  margin-left: 100px;
+}
+
+.collect h3{
+  color : #ddd;
+}
+
+.collect p{
+  font-size: 40px;
+}
+
+/*footer*/
+
+footer{
+  background-color: black;
+  position: relative;
+}
+
+footer ul{
+  list-style:none;
+}
+
+.host{
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  position:relative;
+  top : 50px;
+  text-align: center;
+  height: 60vh;
+ }
+
+.subhost{
+  margin-right: 180px;
+  font-size: 30px;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+footer a:hover{
+  color: #eeba30;
+  border-bottom: solid white;
+}
+
+.subhost ul{
+  padding: 0px;
+  margin-top: 30px;
+}
+
+.subhost li{
+  height: 48px;
+  font-size: 18px;
+}
+
+.logo{
+  position: absolute;
+  display: flex;
+  top : 200px;
+}
+
+.logo img{
+  height: 125px;
+}
+
+.copyright{
+  text-align: center;
+  line-height: 30px;
+  background-color: grey;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* solarmain */
+#submain{
+    background-image:  url("../images/solarimg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* header solar */
+.solar_main_header{
+  margin-left: 100px;
+  margin-top: 270px;
+}
+
+.solar_main_header h1{
+  color: white;
+  margin-bottom: 0;
+
+}
+
+.solar_main_header p{
+  margin-left: 100px;
+}
+/* littleinfo */
+#littleinfo{
+  height : 15vh;
+  background: #2E2D2D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#littleinfo h4{
+  margin: 0px 0px 0px 50px;
+  border-right: solid 1px grey;
+  width : 400px;
+  color : white;
+}
+
+.arrange-list{
+  display: flex;
+  align-items: center;
+}
+
+.section{
+  margin-right: 110px;
+  text-align: center;
+}
+
+.section h3{
+  color: #eeba30;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #eeba30;
+  font-family: cursive;
+}
+
+.section p{
+  margin-top: 0px;
+  font-weight: bold;
+  color: white;
+  font-size: 200%;
+}
+/* about */
+#about{
+  padding-top: 10px;
+  background-color: #C1C1C1;
+  height: 13vh;
+  box-shadow: -5px -5px 15px grey;
+  text-shadow:  0 0 2px black;
+}
+
+#about hgroup{
+  display: flex;
+  justify-content: center;
+}
+
+
+#about h2{
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-family: cursive;
+  font-variant: small-caps;
+  border-right: solid 1px grey;
+  padding-right: 8px;
+}
+
+#about a{
+  text-decoration: none;
+  color : black;
+}
+
+#foroverview{
+  position: absolute;
+  top:30px;
+  right: 50px;
+  transform: rotate(90deg);
+  display: inline;
+}
+
+#forplanets{
+  position: absolute;
+  top:30px;
+  right: 50px;
+  transform: rotate(90deg);
+  display: none;
+}
+
+#forcomets{
+  position: absolute;
+  top:30px;
+  right: 50px;
+  transform: rotate(90deg);
+  display: none;
+}
+
+#fordwarfplanets{
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  transform: rotate(90deg);
+  display: none;
+}
+
+/* overview */
+#overview{
+  width : 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding-top: 50px;
+}
+
+
+.main-definition{
+  border : solid 2px grey;
+  padding: 20px;
+  width : 55%;
+  margin : auto auto 100px 0px;
+}
+
+.title-text{
+  font-family: cursive;
+  color: darkblue;
+  font-weight: bolder;
+}
+
+.overviewinfo{
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+}
+
+.overviewinfo dd{
+  width : 50%;
+}
+
+.image1{
+  margin-right: -100px;
+  width: 500px;
+  float: right;
+  border: inset 5px;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 20px;
+}
+
+.image2{
+  margin-right: -100px;
+  height :300px;
+  float : right;
+  border: inset 5px;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 20px;
+}
+
+/* planets */
+#planets{
+  background-color: #372F2F;
+  padding-bottom: 50px;
+  display: none;
+
+}
+
+#planets h2{
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+.planets-info{
+  float : right;
+  margin : -80px 100px auto auto;
+}
+
+.planets-info table{
+  width: 500px;
+  font-size: 22px;
+  line-height: 25px;
+  border-collapse: collapse;
+  border : solid 4px rgb(72,72,72);
+  box-shadow: 10px 10px 6px rgb(72,72,72);
+}
+
+.planets-info tr:nth-of-type(even){
+  background: #eeba30;
+  color : #283593;
+}
+
+.planets-info tr:nth-of-type(odd){
+  background: #283593;
+  color : #eeba30;
+}
+
+.planets-info th,.planets-info td{
+  text-align: center;
+}
+
+.reflected-image{
+  margin: -80px auto 100px 80px;
+  transform: perspective(800px) rotateY(20deg);
+-webkit-box-reflect : below 5px linear-gradient(transparent,transparent,#000f);
+}
+
+.part1,.part2{
+  display: flex;
+}
+
+.box{
+  margin : 30px 30px;
+  width : 40%;
+  box-shadow: 2px 2px 5px white;
+  position: relative;
+  z-index: 1;
+  height : 100%;
+}
+
+.box h4{
+  margin : 0px;
+  background-color: #eeba30 ;
+  text-align: center;
+}
+
+.box p{
+  margin : 0px;
+  padding : 10px;
+  text-align: center;
+  background-color: #999;
+}
+
+.box::before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  right: -2px;
+  left: -2px;
+  background-color: white;
+  z-index: -1;
+  transform: skewX(2deg);
+  transform: skewY(2deg);
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  top : -2px;
+  bottom : -2px;
+  right : -2px;
+  left : -2px;
+  background-color: white;
+  z-index: -2;
+  filter : blur(40px);
+}
+
+.box:nth-child(1)::before{
+  background : linear-gradient(315deg,#ff0057,#e64a19);
+}
+.box:nth-child(2)::before{
+  background : linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.box:nth-child(3)::before{
+  background : linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.box:nth-child(4)::before{
+  background : linear-gradient(315deg,#ff0000,#ffc107);
+}
+.box:nth-child(5)::before{
+  background : linear-gradient(315deg,#ff0000,#ffc107);
+}
+.box:nth-child(6)::before{
+  background : linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.box:nth-child(7)::before{
+  background : linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.box:nth-child(8)::before{
+  background : linear-gradient(315deg,#ff0057,#e64a19);
+}
+
+.box a{
+  display : none;
+  text-decoration: none;
+  color : white;
+  box-shadow: 1px 1px 2px white;
+  border : solid 2px white;
+  padding: 10px;
+}
+
+.box:hover a{
+  display: inline;
+}
+
+.box a:hover{
+  transition : 0.6s;
+  background : white;
+  color : #222;
+}
+
+
+/* comets */
+#comets{
+  width : 80%;
+  margin: auto auto 0px auto;
+  padding-bottom: 50px;
+  height: 420vh;
+  display: none;
+}
+
+#comets h2{
+  color : black;
+  text-align: center;
+  margin-top: 0;
+}
+
+.commet-list li{
+  max-width: 500px;
+  margin-bottom: 25px;
+  font-size: 150%;
+}
+
+.break-image{
+  width : 85%;
+  border: inset 5px;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 20px;
+}
+
+.collection-video{
+  float: right;
+  transform: translate(40px,-50px);
+}
+
+.collection-video h4{
+  text-align: center;
+}
+
+.collection-video video{
+  width: 500px;
+  border: inset 5px;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 20px;
+  outline: none;
+}
+
+.collection-video p{
+  max-width: 500px;
+  text-align: center;
+}
+
+/* dwarfplanets */
+#dwarfplanets{
+  display: none;
+}
+
+#dwarfplanets h2{
+  text-align: center;
+  color: black;
+  margin-bottom: 30px;
+  margin-top: 0;
+  padding-top: 55px;
+}
+
+
+#dwarfplanets p{
+  text-align: center;
+  margin-bottom: 70px;
+  color: black;
+}
+
+#dwarfplanets hr{
+  border-width: 50px;
+  margin-bottom: 0;
+}
+
+.dwarfcontainer{
+  background:#999;
+  height:210vh;
+}
+
+.dwarfcontainer h3{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 40px;
+  background-color: grey;
+  text-shadow: 2px 2px 3px white;
+}
+
+.sideinfo{
+  float: left;
+  background: #163065;
+  padding: 15px;
+}
+
+.sideinfo h3{
+margin-top: 0;
+background: #163065;
+color: grey;
+}
+
+.sideinfo p{
+  max-width: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.sideinfo p::first-letter{
+  font-size: 200%;
+}
+
+.shadow{
+  text-shadow: 0 0 3px white;
+}
+
+.dwarfsubcontainer{
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.dwarf-box{
+  position: relative;
+  float: right;
+  margin-right: 80px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px black;
+}
+
+.dwarf-box img{
+  width : 400px;
+  height :360px;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.dwarf-box:nth-child(5)
+{
+  position:relative;
+  right:230px;
+}
+
+.mini-container{
+  position:absolute;
+  top:0;
+  opacity: 0;
+  text-align: center;
+  height:360px;
+}
+
+.mini-container h4{
+  text-shadow: 1px 1px 3px white;
+}
+.dwarf-box:hover img{
+  opacity: 0.3;
+}
+
+.dwarf-box:hover .mini-container{
+  opacity: 1;
+}
+
+/* join us */
+.join-page{
+  background: url("../images/joinmain.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height : 115vh;
+}
+
+.join-form{
+  float: right;
+  margin-right: 100px;
+  margin-top: 70px;
+  padding: 30px;
+  background-color: rgba(200,200,200,0.8);
+  box-shadow: 0 0 3px white;
+  border: none;
+}
+
+.join-form legend{
+  text-shadow: 0 0 3px white;
+}
+
+.join-us{
+  text-align: center;
+}
+
+.join-description h2,.join-description p{
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.rules{
+  margin-left: 150px;
+  text-shadow: 0 0 3px darkblue;
+}
+
+.rules li{
+  color: #eee;
+}
+
+#mainblack{
    background-image:  url("../images2/black3.png");
    background-repeat: no-repeat;
    background-position: center;
@@ -97,7 +885,9 @@ header span{
    overflow: hidden;
 
  }
- /*overview*/
+ /*blackhole*/
+
+
  #FIRST h1{
   margin : 250px auto 0px 50px;
   font-size: 110px;
@@ -114,13 +904,15 @@ header span{
      color : white;
 
 }
-#second{
+#blackhole{
      background-color: black;
      overflow: hidden;
      width : 100%;
      margin-right: auto;
      margin-left: auto;
      padding-top: 50px;
+     display: block;
+     height: 480vh;
 }
 
 .deff h1{
@@ -131,7 +923,7 @@ header span{
        color:#111;
 	   font-family:cursive;
 	   display:flex;
-	  
+
 }
 .deff h1 span{
 	 display:table-cell;
@@ -215,7 +1007,7 @@ header span{
        width:390px;
 	   position:center;
 	   height : 400px;
-}	
+}
 .picture1 h1{
      font-size:16px;
 	 font-weight: bold;
@@ -228,7 +1020,7 @@ header span{
 }
 .picture1 p{
 	margin-top:0px;
-	
+
 }
 .picture2{
 	 margin-right: 30px;
@@ -245,18 +1037,18 @@ header span{
        width:390px;
 	   position:center;
 	   height : 400px;
-}	
+}
 
 .picture2 p{
 	margin-top:0px;
-	
+
 }
 /*top 5 holes*/
 .services{
      background-color: #000;
      width : 100%;
      padding:10px;
- 
+
 }
 .services h1{
 	  font-size:4em;
@@ -265,7 +1057,7 @@ header span{
       color:#fff;
 	  overflow:hidden;
 	  margin-left:100px;
-	  
+
 }
 
 
@@ -349,8 +1141,8 @@ header span{
 		color:#fff;
 		text-align:center;
 		transition:0.5s;
-		
-		
+
+
 	}
 	.btn{
 	position:relative;
@@ -372,7 +1164,7 @@ header span{
 	#hole1{
 	margin-top:100px;
 	margin-left:150px;
-	
+
 	}
 	#hole2{
 		float:right;
@@ -396,7 +1188,7 @@ header span{
    /*more details*/
   .readmore{
    display:none;
-   
+
    }
    .readmoreimg{
 	   width:560px;
@@ -455,7 +1247,7 @@ header span{
 	   	   padding:15px;
 	   border-bottom:1px solid #ddddddd;
 	   float:right;
-   }	
+   }
    .popupbox .popupfooter .btn-popup-close-btn {
 	   	  padding:8px 15px;
 		  border:1px solid #555555;
@@ -466,13 +1258,14 @@ header span{
    }
       .popupbox .popupfooter .btn:focus{
 	  outline:none;
-	  
+
 	  }
 	  /*white Hole*/
 	  #whitehole{
 		  background-color:white;
-		  width:99.7%
-		  
+		  width:99.7%;
+      display: none;
+
 		  }
 		  #whitehole h1{
 		  position:relative;
@@ -520,7 +1313,7 @@ header span{
 			 width:0;
 
 		}
-				  
+
 	}
 	.whatis {
 		margin-left:-40px;
@@ -547,8 +1340,8 @@ header span{
      border-radius: 0px;
      height:450px;
 	}
-		  
-	 
+
+
 
 footer{
   background-color: black;
@@ -641,7 +1434,7 @@ footer a:hover{
   color : black;
 }
 
-#foroverview{
+#forblack{
   position: absolute;
   top:30px;
   right: 50px;
@@ -649,28 +1442,10 @@ footer a:hover{
   display: inline;
 }
 
-#forplanets{
+#forwhite{
   position: absolute;
   top:30px;
   right: 50px;
   transform: rotate(90deg);
   display: none;
 }
-
-#forcomets{
-  position: absolute;
-  top:30px;
-  right: 50px;
-  transform: rotate(90deg);
-  display: none;
-}
-
-#fordwarfplanets{
-  position: absolute;
-  top: 30px;
-  right: 90px;
-  transform: rotate(90deg);
-  display: none;
-}
-
-   
